@@ -47,9 +47,6 @@ const Horizontal = () => {
 
   return (
     <main className="min-h-screen w-full overflow-x-hidden">
-      <section className="flex justify-center items-center">
-        <h1 className="font-bold text-8xl text-white">Scroll Down</h1>
-      </section>
       <section
         className="min-h-screen flex flex-nowrap items-center space-x-10 px-20 relative"
         ref={imageContainerRef}
