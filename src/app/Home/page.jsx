@@ -32,7 +32,7 @@ const HomePage = () => {
 
             <section className='h-full'>
                 <div className='w-11/12 mx-auto'>
-                    <div className='flex flex-col justify-center items-center my-40 text-black'>
+                    <div className='flex flex-col justify-center items-center mt-40 text-black'>
                         <h1 className='text-5xl'>Transformations Along</h1>
                         <h1 className='text-7xl'>My Path to Growth</h1>
                     </div>
