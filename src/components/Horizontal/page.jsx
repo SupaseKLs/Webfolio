@@ -24,9 +24,9 @@ const Horizontal = () => {
       scrollTrigger: {
         trigger: imageContainerRef.current,
         scrub: 1,
-        start: "top top", // Start when the image container hits the top of the viewport
-        end: "+=" + imageContainerRef.current.offsetWidth, // Scroll length should match the container width
-        pin: true, // Pin the image container during the scroll
+        start: "top top",
+        end: "+=" + imageContainerRef.current.offsetWidth, 
+        pin: true,
         snap: 1 / (imageRef.current.length - 1),
       },
     });
@@ -34,11 +34,10 @@ const Horizontal = () => {
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
-  }, []); // Empty dependency array ensures this runs once after initial render
+  }, []); 
 
-  // Array of image sources and titles
   const images = [
-    { src: image1, title: "Image 1asddddddddddddddddddddddddddddddddddddddd" },
+    { src: image1, title: "Image 1" },
     { src: image2, title: "Image 2" },
     { src: image3, title: "Image 3" },
     { src: image4, title: "Image 4" },
@@ -54,7 +53,7 @@ const Horizontal = () => {
         {images.map((image, index) => (
           <div
             key={index}
-            className="w-[400px] md:w-[500px] h-[500px] md:h-[600px] shrink-0 rounded-3xl"
+            className="w-[400px] md:w-[500px] h-3/5 shrink-0 rounded-3xl"
             ref={(el) => (imageRef.current[index] = el)}
           >
             <Image src={image.src} className="w-full h-full object-cover" alt={`Image ${index + 1}`} />
