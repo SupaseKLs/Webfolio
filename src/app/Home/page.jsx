@@ -1,7 +1,9 @@
 "use client"
 import React from 'react'
 import Navbar from "@/components/Navbar/Navbar";
-import Headache from '@/assets/image/headache.gif'
+import Seek from '@/assets/image/seek.gif'
+import World from '@/assets/image/world.gif'
+import Supasek from '@/assets/image/s.gif'
 import Image from 'next/image';
 import CardProjects from '@/components/CardProjects/page'
 import CardHorizontal from '@/components/Horizontal/page'
@@ -35,12 +37,11 @@ const HomePage = () => {
 
                     <div className='absolute bottom-0 w-full'>
                         <motion.div
-                            className="rounded-lg"  // Initial rounded corners
+                            className="relative rounded-lg bg-[url('/bg.png')]  bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center"  // Initial rounded corners
                             style={{
                                 scale,
                                 width: "100%",
                                 height: "100vh",
-                                background: 'white',
                                 borderRadius: "0px", // Initial sharp corners
                             }}
                             animate={{
@@ -51,6 +52,20 @@ const HomePage = () => {
                                 ease: "easeInOut",
                             }}
                         >
+                            <div className='relative w-auto text-center text-2xl md:text-4xl lg:text-5xl'>
+                                <div className='flex items-center'>
+                                    <Image src={Supasek}className='w-20 md:w-30 lg:w-36' />
+                                    <h1>I'm S.I come from Thailand,</h1>
+                                </div>
+                                <div className='flex items-center'>
+                                    <h1>"Explore our work to disc<div className='inline-flex items-center'><Image src={World} alt='world' className='w-4 md:w-6 lg:w-8 h-auto' /></div>ver new</h1>
+                                </div>
+                                <div className='pt-4 flex items-center'>
+                                    <h1>creative ideas that might amaze y<div className='inline-flex'><Image src={Seek} alt='seek' className='w-4 md:w-6 lg:w-8 h-auto' /></div>u!"</h1>
+                                </div>
+
+
+                            </div>
                         </motion.div>
                     </div>
 
@@ -62,9 +77,9 @@ const HomePage = () => {
 
             <section className='h-full'>
                 <div className='w-11/12 mx-auto'>
-                    <div className='flex flex-col justify-center items-center mt-40 text-black'>
-                        <h1 className='text-5xl'>Transformations Along</h1>
-                        <h1 className='text-7xl'>My Path to Growth</h1>
+                    <div className='flex flex-col justify-center items-center mt-20 text-black'>
+                        <h1 className='text-3xl md:text-5xl'>Transformations Along</h1>
+                        <h1 className='text-5xl md:text-7xl'>My Path to Growth</h1>
                     </div>
                     <div>
                         <CardHorizontal />
