@@ -11,7 +11,7 @@ const Horizontal = () => {
 
   useEffect(() => {
     gsap.to(videoRef.current, {
-      xPercent: -100 * (videoRef.current.length - 1),
+      xPercent: -110 * (videoRef.current.length - 1),
       ease: "none",
       scrollTrigger: {
         trigger: videoContainerRef.current,

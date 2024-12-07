@@ -7,6 +7,9 @@ import Supasek from '@/assets/image/s.gif'
 import Image from 'next/image';
 import CardProjects from '@/components/CardProjects/page'
 import CardHorizontal from '@/components/Horizontal/page'
+import NumberTicker from '@/components/Counter/page'
+import Footer from '@/components/StickyFooter/page'
+
 import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
 const HomePage = () => {
     const { scrollY } = useScroll()
@@ -54,7 +57,7 @@ const HomePage = () => {
                         >
                             <div className='relative w-auto text-center text-2xl md:text-4xl lg:text-5xl'>
                                 <div className='flex items-center'>
-                                    <Image src={Supasek}className='w-20 md:w-30 lg:w-36' />
+                                    <Image src={Supasek} className='w-20 md:w-30 lg:w-36' alt='Supasek' />
                                     <h1>I'm S.I come from Thailand,</h1>
                                 </div>
                                 <div className='flex items-center'>
@@ -63,23 +66,17 @@ const HomePage = () => {
                                 <div className='pt-4 flex items-center'>
                                     <h1>creative ideas that might amaze y<div className='inline-flex'><Image src={Seek} alt='seek' className='w-4 md:w-6 lg:w-8 h-auto' /></div>u!"</h1>
                                 </div>
-
-
                             </div>
                         </motion.div>
                     </div>
-
-
                 </div>
             </header>
-
-
 
             <section className='h-full'>
                 <div className='w-11/12 mx-auto'>
                     <div className='flex flex-col justify-center items-center mt-20 text-black'>
-                        <h1 className='text-3xl md:text-5xl'>Transformations Along</h1>
-                        <h1 className='text-5xl md:text-7xl'>My Path to Growth</h1>
+                        <h1 className='text-2xl md:text-5xl'>Transformations Along</h1>
+                        <h1 className='text-4xl md:text-7xl'>My Path to Growth</h1>
                     </div>
                     <div>
                         <CardHorizontal />
@@ -88,17 +85,18 @@ const HomePage = () => {
             </section>
 
             <section>
-                <div className='w-11/12 mx-auto flex flex-col lg:flex-row justify-between'>
+                <div className='w-11/12 mx-auto flex flex-col pb-10 lg:flex-row justify-between'>
                     <div>
-                        <h1 className='text-8xl'>8</h1>
+                        <NumberTicker className="text-8xl text-black font-bold" value={8} />
                         <h1 className='text-2xl'>Years of Experience</h1>
                     </div>
                     <div>
-                        <h1 className='text-8xl'>150 +</h1>
+                        <NumberTicker className="text-8xl text-black font-bold" value={10} /><span className='text-8xl'>+</span>
+
                         <h1 className='text-2xl'>Complete Projects</h1>
                     </div>
-                    <div className='max-w-96 text-4xl'>
-                        <h1>All their front-end parts were completely done by me.These are some of my recentfavorites.</h1>
+                    <div className='max-w-[400px] pt-10 md:py-0 text-4xl'>
+                        <h1>All parts of these projects were developed by me. Here are some of my latest favorites.</h1>
                     </div>
                 </div>
 
@@ -106,6 +104,8 @@ const HomePage = () => {
                     <CardProjects />
                 </div>
             </section>
+
+            <Footer />
         </>
     )
 }
