@@ -162,7 +162,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Resume Button */}
+        {/* Resume Button s*/}
         <Magnetic>
           <div className="group hidden md:block relative cursor-pointer text-xl p-2 w-32 border bg-white rounded-full overflow-hidden text-black text-center font-semibold">
             <span className="translate-y-0 group-hover:-translate-y-12 group-hover:opacity-0 transition-all duration-300 inline-block">
