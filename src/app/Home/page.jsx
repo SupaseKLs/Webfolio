@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import Navbar from "@/components/Navbar/Navbar";
+import Cursor from "@/components/Cursor/cursor_core/page";
 import Seek from '@/assets/image/seek.gif'
 import World from '@/assets/image/world.gif'
 import Supasek from '@/assets/image/s.gif'
@@ -11,36 +12,25 @@ import NumberTicker from '@/components/Counter/page'
 import Footer from '@/components/StickyFooter/page'
 
 import { motion, useScroll, useTransform, useMotionValueEvent } from 'framer-motion'
+
 const HomePage = () => {
+    
     const { scrollY } = useScroll()
 
-    useMotionValueEvent(scrollY, "change", (latest) => {
-        console.log("Page scroll: ", latest)
-    })
-
+    // useMotionValueEvent(scrollY, "change", (latest) => {
+    //     console.log("Page scroll: ", latest)
+    // })
+    
     const scale = useTransform(scrollY, [150, 500], [0.9, 1])
     return (
         <>
             <header className='relative h-[200vh]'>
                 <div className="bg-fixed z-10 bg-[url('../assets/image/me.jpg')] bg-cover bg-no-repeat bg-center font-sans h-full">
                     <Navbar />
-                    {/* <div className="w-11/12 mx-auto">
-                        <div className="absolute bottom-10 flex flex-col text-9xl uppercase text-white">
-                            <h1 className="flex items-center">
-                                Fr
-                                <span className="inline-block">
-                                    <Image className="w-24 h-24" src={Headache} alt="seek" />
-                                </span>
-                                nt-End
-                            </h1>
-                            <h1>Developer</h1>
-                        </div>
-                    </div> */}
 
-
-                    <div className='absolute bottom-0 w-full'>
+                    <div id='About' className='absolute bottom-0 w-full'>
                         <motion.div
-                            className="relative rounded-lg bg-[url('/bg.png')]  bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center"  // Initial rounded corners
+                            className="relative rounded-lg bg-[url('/bg.png')] bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center"  // Initial rounded corners
                             style={{
                                 scale,
                                 width: "100%",
@@ -84,19 +74,19 @@ const HomePage = () => {
                 </div>
             </section>
 
-            <section>
-                <div className='w-11/12 mx-auto flex flex-col pb-10 lg:flex-row justify-between'>
+            <section id='Projects'>
+                <div className='w-11/12 mx-auto flex flex-col pb-10 md:flex-row lg:flex-row justify-between'>
                     <div>
-                        <NumberTicker className="text-8xl text-black font-bold" value={8} />
-                        <h1 className='text-2xl'>Years of Experience</h1>
+                        <NumberTicker className="text-8xl text-blue-600 font-bold" value={8} />
+                        <h1 className='text-2xl font-medium'>Years of<br /> Experience</h1>
                     </div>
                     <div>
-                        <NumberTicker className="text-8xl text-black font-bold" value={10} /><span className='text-8xl'>+</span>
+                        <NumberTicker className="text-8xl text-blue-600 font-bold" value={10} /><span className='text-blue-600 text-8xl'>+</span>
 
-                        <h1 className='text-2xl'>Complete Projects</h1>
+                        <h1 className='text-2xl font-medium'>Complete<br /> Projects</h1>
                     </div>
-                    <div className='max-w-[400px] pt-10 md:py-0 text-4xl'>
-                        <h1>All parts of these projects were developed by me. Here are some of my latest favorites.</h1>
+                    <div className='md:max-w-[350px] lg:max-w-[400px] pt-10 md:py-0 text-4xl'>
+                        <h1 className='font-Roboto font-semibold'>All parts of these projects were developed by me. Here are some of my latest favorites.</h1>
                     </div>
                 </div>
 
@@ -105,7 +95,9 @@ const HomePage = () => {
                 </div>
             </section>
 
+            <section id="Contact">
             <Footer />
+            </section>
         </>
     )
 }

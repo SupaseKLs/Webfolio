@@ -39,13 +39,13 @@ const Horizontal = () => {
   return (
     <main className="min-h-screen w-full mb-20 overflow-x-hidden">
       <section
-        className="min-h-screen flex flex-nowrap items-center space-x-10 px-20 relative"
+        className="min-h-screen my-10 flex flex-nowrap items-center space-x-10 px-20 relative"
         ref={videoContainerRef}
       >
         {videos.map((video, index) => (
           <div
             key={index}
-            className="w-[400px] md:w-[350px] lg:w-[400px] h-11/12 bg-gray-100 shrink-0 rounded-3xl"
+            className="w-[400px] md:w-[300px] lg:w-[320px] h-11/12 bg-gray-100 shrink-0 rounded-3xl"
             ref={(el) => (videoRef.current[index] = el)}
           >
             <video

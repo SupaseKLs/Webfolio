@@ -11,6 +11,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        Roboto: ["Roboto", "sans-serif"], // กำหนดชื่อฟอนต์
+      },
       backgroundImage: {
           'hero-pattern': "url('/bg.png')",
         'radial': 'radial-gradient(circle, var(--tw-gradient-stops))',

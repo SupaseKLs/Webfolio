@@ -4,7 +4,6 @@ import Link from 'next/link';
 import { AnimatePresence, motion } from 'framer-motion';
 import Magnetic from '@/components/Magnetic/page'
 
-
 const Navbar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
@@ -50,9 +49,14 @@ const Navbar = () => {
   };
 
   const navLinks = [
-    { title: 'About', href: '/' },
-    { title: 'Project', href: '/' },
-    { title: 'Contact', href: '/' },
+    { title: 'About', href: '#About' },
+    { title: 'Project', href: '#Projects' },
+    { title: 'Contact', href: '#Contact' },
+  ];
+  const menuItems = [
+    { name: "Home", href: "/" },
+    { name: "Projects", href: "#Projects" },
+    { name: "Contact", href: "#Contact" }
   ];
 
   useEffect(() => {
@@ -92,11 +96,11 @@ const Navbar = () => {
         transition={{ duration: 0.2, ease: 'easeInOut' }}
       >
         {/* Desktop Menu */}
-        <div className="hidden lg:flex">
+        <div className="hidden md:flex lg:flex">
           <ul className='flex'>
-            {["Home", "About us", "Projects", "Contact"].map((item) => (
+            {menuItems.map((item) => (
               <motion.li
-                key={item}
+                key={item.name} // Use the `name` as the unique key
                 initial="initial"
                 whileHover="hovered"
                 className="relative cursor-pointer px-2 text-lg font-semibold overflow-hidden font-Inter"
@@ -105,23 +109,24 @@ const Navbar = () => {
                   className='text-text_color'
                   variants={{
                     initial: { y: 0 },
-                    hovered: { y: "-100%" }
+                    hovered: { y: "-100%" },
                   }}
                 >
-                  <Link href={`/${item.toLowerCase().replace(' ', '-')}`}>{item}</Link>
+                  <Link href={item.href}>{item.name}</Link> {/* Use item.href and item.name */}
                 </motion.div>
                 <motion.div
                   className='absolute inset-0 px-2 text-white'
                   variants={{
                     initial: { y: "100%" },
-                    hovered: { y: 0, }
+                    hovered: { y: 0 },
                   }}
                 >
-                  <Link href={`/${item.toLowerCase().replace(' ', '-')}`}>{item}</Link>
+                  <Link href={item.href}>{item.name}</Link> {/* Use item.href and item.name */}
                 </motion.div>
               </motion.li>
             ))}
           </ul>
+
         </div>
 
         {/* Hamburger Button (Mobile) */}
@@ -134,7 +139,7 @@ const Navbar = () => {
         {/* Right Section (Desktop) */}
         <div className="hidden lg:flex">
           <div>
-            <h1 className='text-gray-700'>Hello, my name is</h1>
+            <h1 className='text-gray-300'>Hello, my name is</h1>
             <motion.h1
               initial="initial"
               whileHover="hovered"
@@ -164,14 +169,22 @@ const Navbar = () => {
 
         {/* Resume Button s*/}
         <Magnetic>
-          <div className="group hidden md:block relative cursor-pointer text-xl p-2 w-32 border bg-white rounded-full overflow-hidden text-black text-center font-semibold">
-            <span className="translate-y-0 group-hover:-translate-y-12 group-hover:opacity-0 transition-all duration-300 inline-block">
-              Resume
-            </span>
-            <div className=" flex gap-2 text-white bg-blue-400 z-10 items-center absolute left-0 top-0 h-full w-full justify-center translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 rounded-full group-hover:rounded-none">
-              <span>Resume</span>
-            </div>
+          <div className="group block relative cursor-pointer text-xl p-2 w-32 border bg-white rounded-full overflow-hidden text-black text-center font-semibold">
+            <a
+              href="/resume.pdf"  // Replace with the correct path to your PDF file
+              target="_blank"  // Opens the PDF in a new tab
+              rel="noopener noreferrer"
+              className="w-full h-full block"
+            >
+              <span className="translate-y-0 group-hover:-translate-y-12 group-hover:opacity-0 transition-all duration-300 inline-block">
+                Resume
+              </span>
+              <div className="flex gap-2 text-white bg-blue-400 z-10 items-center absolute left-0 top-0 h-full w-full justify-center translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 rounded-full group-hover:rounded-none">
+                <span>Resume</span>
+              </div>
+            </a>
           </div>
+
         </Magnetic>
 
       </motion.nav>
