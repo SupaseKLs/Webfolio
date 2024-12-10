@@ -169,23 +169,21 @@ const Navbar = () => {
 
         {/* Resume Button s*/}
         <Magnetic>
-          <div className="group block relative cursor-pointer text-xl p-2 w-32 border bg-white rounded-full overflow-hidden text-black text-center font-semibold">
-            <a
-              href="http://localhost:3000/resume.pdf"  // Replace with the correct path to your PDF file
-              target="_blank"  // Opens the PDF in a new tab
-              rel="noopener noreferrer"
-              className="w-full h-full block"
-            >
-              <span className="translate-y-0 group-hover:-translate-y-12 group-hover:opacity-0 transition-all duration-300 inline-block">
-                Resume
-              </span>
-              <div className="flex gap-2 text-white bg-blue-400 z-10 items-center absolute left-0 top-0 h-full w-full justify-center translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 rounded-full group-hover:rounded-none">
-                <span>Resume</span>
-              </div>
-            </a>
-          </div>
+  <div className="group block relative cursor-pointer text-xl p-2 w-32 border bg-white rounded-full overflow-hidden text-black text-center font-semibold">
+    <a
+      href="/Resume.pdf"  // Replace with the correct path to your PDF file
+      className="w-full h-full block"
+    >
+      <span className="translate-y-0 group-hover:-translate-y-12 group-hover:opacity-0 transition-all duration-300 inline-block">
+        Resume
+      </span>
+      <div className="flex gap-2 text-white bg-blue-400 z-10 items-center absolute left-0 top-0 h-full w-full justify-center translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 rounded-full group-hover:rounded-none">
+        <span>Resume</span>
+      </div>
+    </a>
+  </div>
+</Magnetic>
 
-        </Magnetic>
 
       </motion.nav>
 
