@@ -59,7 +59,7 @@ const items = [
     src: "/AF.png", 
     alt: "works", 
     name: "ArmFlag", 
-    description: "Innovation competition, I created “ArmFlag” a smart armband that measures fasting blood sugar, PM 2.5 levels, and connects to an application to notify the user’s health status, especially for chronic illnesses. It also have gamification and gained experience in business study.", 
+    description: "Innovation competition, I created ArmFlag a smart armband that measures fasting blood sugar, PM 2.5 levels, and connects to an application to notify the user health status, especially for chronic illnesses. It also have gamification and gained experience in business study.", 
     category: "UI/UX Design" 
   },
 ];

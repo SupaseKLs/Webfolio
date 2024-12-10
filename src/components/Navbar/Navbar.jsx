@@ -171,7 +171,7 @@ const Navbar = () => {
         <Magnetic>
           <div className="group block relative cursor-pointer text-xl p-2 w-32 border bg-white rounded-full overflow-hidden text-black text-center font-semibold">
             <a
-              href="/resume.pdf"  // Replace with the correct path to your PDF file
+              href="http://localhost:3000/resume.pdf"  // Replace with the correct path to your PDF file
               target="_blank"  // Opens the PDF in a new tab
               rel="noopener noreferrer"
               className="w-full h-full block"
@@ -196,7 +196,7 @@ const Navbar = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="origin-top fixed left-0 top-0 w-full h-screen bg-black bg-opacity-30 backdrop-blur-md text-white p-6">
+            className="origin-top fixed z-30 left-0 top-0 w-full h-screen bg-black bg-opacity-30 backdrop-blur-md text-white p-6">
             <div className="flex h-full flex-col">
 
               <motion.div
@@ -217,24 +217,6 @@ const Navbar = () => {
                     );
                   })
                 }
-                <motion.ul
-                  className='flex items-center  mt-6 rounded-full'
-                  initial={{ opacity: 0 }} // Start invisible
-                  animate={{ opacity: 1 }}  // Fade in
-                  exit={{ opacity: 0 }}     // Fade out on exit
-                  transition={{ duration: 0.8 }} // Duration of the fade-in/out
-                >
-                  <Magnetic>
-                    <div className="group relative cursor-pointer text-xl p-2 w-32 border bg-white rounded-full overflow-hidden text-black text-center font-semibold">
-                      <span className="translate-y-0 group-hover:-translate-y-12 group-hover:opacity-0 transition-all duration-300 inline-block">
-                        Resume
-                      </span>
-                      <div className="flex gap-2 text-white bg-blue-400 z-10 items-center absolute left-0 top-0 h-full w-full justify-center translate-y-12 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 rounded-full group-hover:rounded-none">
-                        <span>Resume</span>
-                      </div>
-                    </div>
-                  </Magnetic>
-                </motion.ul>
               </motion.div>
             </div>
           </motion.div>

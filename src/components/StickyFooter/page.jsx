@@ -29,7 +29,7 @@ export default function Footer() {
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
     >
 
-      <div className='bg-[#fefefe] fixed bottom-0 w-full'>
+      <div className='bg-[#fefefe] fixed bottom-0 z-0 w-full'>
         <motion.div ref={constrainsRef}>
 
           <div className="flex-col xl:flex-row flex justify-between px-4 md:px-16">

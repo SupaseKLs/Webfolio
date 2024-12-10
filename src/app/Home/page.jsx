@@ -25,7 +25,8 @@ const HomePage = () => {
     return (
         <>
             <header className='relative h-[200vh]'>
-                <div className="bg-fixed z-10 bg-[url('../assets/image/me.jpg')] bg-cover bg-no-repeat bg-center font-sans h-full">
+            <div className="bg-fixed z-10 bg-[url('../assets/image/me.jpg')] bg-cover bg-no-repeat bg-center font-sans min-h-screen">
+
                     <Navbar />
 
                     <div id='About' className='absolute bottom-0 w-full'>
