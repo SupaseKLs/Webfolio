@@ -25,7 +25,7 @@ const HomePage = () => {
     return (
         <>
             <header className='relative h-screen md:h-[200vh]'>
-                <div className="bg-fixed z-10 bg-[url('../assets/image/me.jpg')] bg-cover bg-no-repeat bg-center font-sans h-full">
+                <div className="bg-fixed z-10 bg-[url('../assets/image/me.jpg')] bg-cover bg-no-repeat bg-center font-sans h-screen md:h-full">
                     <Navbar />
                     <div id='About' className='hidden md:block absolute bottom-0 w-full'>
                         <motion.div
