@@ -48,7 +48,7 @@ const HomePage = () => {
                             <div className='relative w-auto text-center text-2xl md:text-4xl lg:text-5xl'>
                                 <div className='flex items-center'>
                                     <Image src={Supasek} className='w-20 md:w-30 lg:w-36' alt='Supasek' />
-                                    <h1>I'm S.I come from Thailand,</h1>
+                                    <h1>I am S.I come from Thailand,</h1>
                                 </div>
                                 <div className='flex items-center'>
                                     <h1>Explore our work to disc<div className='inline-flex items-center'><Image src={World} alt='world' className='w-4 md:w-6 lg:w-8 h-auto' /></div>ver new</h1>
