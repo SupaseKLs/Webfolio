@@ -51,10 +51,10 @@ const HomePage = () => {
                                     <h1>I'm S.I come from Thailand,</h1>
                                 </div>
                                 <div className='flex items-center'>
-                                    <h1>"Explore our work to disc<div className='inline-flex items-center'><Image src={World} alt='world' className='w-4 md:w-6 lg:w-8 h-auto' /></div>ver new</h1>
+                                    <h1>Explore our work to disc<div className='inline-flex items-center'><Image src={World} alt='world' className='w-4 md:w-6 lg:w-8 h-auto' /></div>ver new</h1>
                                 </div>
                                 <div className='pt-4 flex items-center'>
-                                    <h1>creative ideas that might amaze y<div className='inline-flex'><Image src={Seek} alt='seek' className='w-4 md:w-6 lg:w-8 h-auto' /></div>u!"</h1>
+                                    <h1>creative ideas that might amaze y<div className='inline-flex'><Image src={Seek} alt='seek' className='w-4 md:w-6 lg:w-8 h-auto' /></div>u!</h1>
                                 </div>
                             </div>
                         </motion.div>
