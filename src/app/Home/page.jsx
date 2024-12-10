@@ -24,8 +24,7 @@ const HomePage = () => {
     const scale = useTransform(scrollY, [150, 500], [0.9, 1])
     return (
         <>
-            <header className='relative w-screen h-[200vh]'>
-                <div className="bg-fixed z-10 bg-[url('../assets/image/me.jpg')] bg-cover bg-no-repeat bg-center font-sans h-full">
+                <div className="bg-fixed z-10 bg-[url('../assets/image/me.jpg')] bg-cover bg-no-repeat bg-center font-sans h-screen">
                     <Navbar />
                     <div id='About' className='hidden md:block absolute bottom-0 w-full'>
                         <motion.div
@@ -59,7 +58,6 @@ const HomePage = () => {
                         </motion.div>
                     </div>
                 </div>
-            </header>
                     <div id='About' className='block md:hidden w-full'>
                         <motion.div
                             className="relative rounded-lg bg-[url('/bg.png')] bg-cover bg-no-repeat bg-center flex flex-col items-center justify-center"  // Initial rounded corners
