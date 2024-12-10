@@ -24,8 +24,8 @@ const HomePage = () => {
     const scale = useTransform(scrollY, [150, 500], [0.9, 1])
     return (
         <>
-            <header className='relative h-screen md:h-[200vh]'>
-                <div className="bg-fixed z-10 bg-[url('../assets/image/me.jpg')] bg-cover bg-no-repeat bg-center font-sans h-screen md:h-full">
+            <header className='relative h-screen'>
+                <div className="bg-fixed z-10 bg-[url('../assets/image/me.jpg')] bg-cover bg-no-repeat bg-center font-sans h-screen">
                     <Navbar />
                     <div id='About' className='hidden md:block absolute bottom-0 w-full'>
                         <motion.div
